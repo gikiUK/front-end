@@ -1,0 +1,13 @@
+{
+  "name": "@giki/content",
+  "version": "1.0.0",
+  "description": "Giki blog posts and articles - markdown source files",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.8.0"
+  }
+}
