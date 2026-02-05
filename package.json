@@ -1,0 +1,23 @@
+{
+  "name": "@giki/monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Giki monorepo",
+  "scripts": {
+    "dev:app": "pnpm --filter @giki/app dev",
+    "build:app": "pnpm --filter @giki/app build",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
+    "format:check": "pnpm -r format:check"
+  },
+  "keywords": [
+    "giki",
+    "monorepo"
+  ],
+  "author": "Giki Team",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=10.0.0"
+  }
+}
