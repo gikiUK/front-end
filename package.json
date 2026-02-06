@@ -24,7 +24,7 @@
   "lint-staged": {
     "app/**/*.{js,jsx,ts,tsx,mjs}": [
       "prettier --write --config app/.prettierrc.json --ignore-path app/.prettierignore",
-      "eslint --no-warn-on-unmatched-pattern"
+      "eslint --fix --no-warn-on-unmatched-pattern"
     ],
     "app/**/*.{json,css,md,yaml,yml}": [
       "prettier --write --config app/.prettierrc.json --ignore-path app/.prettierignore"
