@@ -8,7 +8,8 @@
     "build:app": "pnpm --filter @giki/app build",
     "lint": "pnpm -r lint",
     "format": "pnpm -r format",
-    "format:check": "pnpm -r format:check"
+    "format:check": "pnpm -r format:check",
+    "prepare": "husky"
   },
   "keywords": [
     "giki",
@@ -19,5 +20,21 @@
   "engines": {
     "node": ">=20.0.0",
     "pnpm": ">=10.0.0"
+  },
+  "lint-staged": {
+    "app/**/*.{js,jsx,ts,tsx,mjs}": [
+      "prettier --write --config app/.prettierrc.json --ignore-path app/.prettierignore",
+      "eslint --no-warn-on-unmatched-pattern"
+    ],
+    "app/**/*.{json,css,md,yaml,yml}": [
+      "prettier --write --config app/.prettierrc.json --ignore-path app/.prettierignore"
+    ],
+    "content/**/*.{md,json,yaml,yml}": [
+      "prettier --write --config content/.prettierrc.json --ignore-path content/.prettierignore"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7"
   }
 }
