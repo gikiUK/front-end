@@ -23,19 +23,18 @@
   },
   "lint-staged": {
     "app/**/*.{js,jsx,ts,tsx,mjs}": [
-      "prettier --write",
+      "pnpm --filter @giki/app exec prettier --write",
       "pnpm --filter @giki/app exec eslint --fix --no-error-on-unmatched-pattern"
     ],
     "app/**/*.{json,css,md,yaml,yml}": [
-      "prettier --write"
+      "pnpm --filter @giki/app exec prettier --write"
     ],
     "content/**/*.{md,json,yaml,yml}": [
-      "prettier --write"
+      "pnpm --filter @giki/content exec prettier --write"
     ]
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
-    "prettier": "^3.8.0"
+    "lint-staged": "^16.2.7"
   }
 }
