@@ -23,14 +23,14 @@
   },
   "lint-staged": {
     "app/**/*.{js,jsx,ts,tsx,mjs}": [
-      "prettier --write --config app/.prettierrc.json --ignore-path app/.prettierignore",
-      "eslint --fix --no-warn-on-unmatched-pattern"
+      "pnpm --filter @giki/app exec prettier --write",
+      "pnpm --filter @giki/app exec eslint --fix --no-error-on-unmatched-pattern"
     ],
     "app/**/*.{json,css,md,yaml,yml}": [
-      "prettier --write --config app/.prettierrc.json --ignore-path app/.prettierignore"
+      "pnpm --filter @giki/app exec prettier --write"
     ],
     "content/**/*.{md,json,yaml,yml}": [
-      "prettier --write --config content/.prettierrc.json --ignore-path content/.prettierignore"
+      "pnpm --filter @giki/content exec prettier --write"
     ]
   },
   "devDependencies": {

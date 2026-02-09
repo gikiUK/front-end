@@ -14,5 +14,14 @@
   "proseWrap": "preserve",
   "htmlWhitespaceSensitivity": "css",
   "embeddedLanguageFormatting": "auto",
-  "singleAttributePerLine": false
+  "singleAttributePerLine": false,
+  "overrides": [
+    {
+      "files": ["*.css"],
+      "options": {
+        "tabWidth": 4,
+        "trailingComma": "none"
+      }
+    }
+  ]
 }
