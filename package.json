@@ -23,18 +23,19 @@
   },
   "lint-staged": {
     "app/**/*.{js,jsx,ts,tsx,mjs}": [
-      "prettier --write --config app/.prettierrc.json --ignore-path app/.prettierignore",
-      "eslint --fix --no-warn-on-unmatched-pattern"
+      "prettier --write",
+      "pnpm --filter @giki/app exec eslint --fix --no-error-on-unmatched-pattern"
     ],
     "app/**/*.{json,css,md,yaml,yml}": [
-      "prettier --write --config app/.prettierrc.json --ignore-path app/.prettierignore"
+      "prettier --write"
     ],
     "content/**/*.{md,json,yaml,yml}": [
-      "prettier --write --config content/.prettierrc.json --ignore-path content/.prettierignore"
+      "prettier --write"
     ]
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7"
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.0"
   }
 }

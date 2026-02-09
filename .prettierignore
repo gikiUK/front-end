@@ -34,3 +34,6 @@ yarn-error.log*
 
 # Cache
 .cache
+
+# Lock files
+pnpm-lock.yaml
