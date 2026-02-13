@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === "production") {
   const Sentry = require("@sentry/nextjs");
 
   Sentry.init({
-    dsn: "TODO", // TODO: Replace with actual Sentry DSN before production deployment
+    dsn: "https://395a7912461239f80a32552095b4664a@o4510766458601472.ingest.de.sentry.io/4510879533105232",
 
     // Add optional integrations for additional features
     integrations: [Sentry.replayIntegration()],
