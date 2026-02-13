@@ -11,5 +11,8 @@ yarn-error.log*
 .pnpm-debug.log*
 node_modules
 
+# worktrees
+worktrees/
+
 # Claude Code local settings
 **/settings.local.json
