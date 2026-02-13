@@ -29,8 +29,11 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Sentry
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Sentry is used for error monitoring and performance tracing. Before deploying to production, the following must be configured:
+
+- **Sentry DSN**: Replace the `"TODO"` placeholder DSN in `sentry.edge.config.ts` and `instrumentation-client.ts` with the actual Sentry DSN for the `giki-front-end` project (org: `thalamus-ai`).
+- **`SENTRY_AUTH_TOKEN`**: Set the `SENTRY_AUTH_TOKEN` environment variable in your CI/CD environment. This is required for source map uploads during production builds. For local builds, you can set it in `.env.sentry-build-plugin`.
